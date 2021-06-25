@@ -1,19 +1,17 @@
-.information{
-    width:100%;
-    height: 100%;
-    background:url(http://coding.imweb.io/img/project/resume/bg.png) repeat;
-    background-color:rgb(70, 128, 236);
-    
-    align-items: center;
-    color:aliceblue;
-    margin-top:0;
+:root {
+    --experience-and-skills-backgroundcolor:white;
+    --line-color:rgb(218, 209, 209);
 }
 
-@media (min-width:768px){
-    .information{
-        width:50%;
-        height: 100%;
-    }
+
+.information{
+    width:100vw;
+    height: 100vh;
+    background:url(http://coding.imweb.io/img/project/resume/bg.png) repeat;
+    background-color:rgb(70, 128, 236);    
+    align-items: center;
+    color:var(--experience-and-skills-backgroundcolor);
+    margin:0;
 }
 
 .information-bd{  
@@ -33,7 +31,7 @@
     border:1px;
     border-color: rgb(162, 194, 223);
     border-radius: 50%;
-    background:cornsilk;
+    background:var(--experience-and-skills-backgroundcolor);
     background: url(http://coding.imweb.io/img/project/resume/avatar.png) no-repeat;
     background-size: cover;
 }
@@ -78,3 +76,128 @@ li{
     transform: translate(-50%,100px);
 }
 
+
+
+.experience-and-skills{
+    top:0;
+    margin:0;
+    width:100vw;
+    height:100vh;
+    text-align:center;
+    color:rgb(70, 128, 236);
+    background-color:var(--experience-and-skills-backgroundcolor);
+}
+
+.experience-and-skills .experience{
+    display: inline-block;
+    width:100%;
+    height: 50%;
+    background-color:inherit;
+}
+
+.experience-and-skills  .experience-header,
+.experience-and-skills  .skills-header{
+    margin-top:60px;
+    width:100%;
+    background: linear-gradient(to right,var(--experience-and-skills-backgroundcolor) 3%,var(--line-color) 3%,var(--line-color) 40%,var(--experience-and-skills-backgroundcolor) 40%,var(--experience-and-skills-backgroundcolor) 60%, var(--line-color) 60%) no-repeat;
+    background-size: 100% 1px;
+    background-position: right;
+}
+
+
+.experience-and-skills .skills{
+    display: inline-block;
+    width:100%;
+    height: 50%;
+    background-color:inherit;
+}
+
+.experience-list{
+    position:relative;
+    flex-direction:column;
+    align-items: left;
+    text-align: left;
+    margin-bottom:2px;
+    color:rgba(0, 0, 0, 0.63);
+}
+
+.experience-list::before{
+    display: fixed;
+    content: "";
+    position:absolute;
+    width:100%;
+    height: 100%;
+    border-style: solid;
+    border-width: 0 0 0 1.5px;
+    border-color: var(--line-color);
+    transform: translateX(0.6rem);  
+}
+
+.experience-list .experience-time,
+.experience-list .experience-name{
+    font-size: 20px;
+    font-weight: bold;
+    padding:2px 0;
+    margin-bottom: 3px 0;
+}
+
+.experience-list p{
+    font-size:medium;
+    font-family: monospace;
+    line-height: 1.9em;
+    margin-top:1em;
+}
+
+
+.skills-list{
+    list-style-type:none;
+    align-items: left;
+    text-align: left;
+    margin-bottom:2px;
+    color:rgba(0, 0, 0, 0.63);
+}
+
+.skill-header{
+    
+    
+    
+
+}
+
+.skill-header .skill-name{
+    display: inline-block;
+    
+
+
+}
+
+.skill-header .skill-depth{
+    display: inline-block;
+    text-align: right;
+    
+    
+}
+
+
+.skills-item p{
+    font-size: smaller;
+}
+
+@media (min-width:768px){
+    body{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .information{
+        flex:1;
+        width:50vw;
+        height: 100vh;
+    }
+    .experience-and-skills{
+        flex:1;
+        width:50vw;
+        height:100vh;
+        background-color:var(--experience-and-skills-backgroundcolor);
+    }
+}
