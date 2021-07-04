@@ -27,13 +27,19 @@
     margin:0 auto 0;
     width:100px;
     height:100px;
-    box-shadow: 0 0 5px rgba(94, 169, 230, 0.377);
+    box-shadow: 0 0 5px rgba(235, 239, 241, 0.918);
     border:1px;
     border-color: rgb(162, 194, 223);
     border-radius: 50%;
-    background:var(--experience-and-skills-backgroundcolor);
+    /* background:var(rgba(235, 239, 241, 0.918)); */
+    background-color:rgba(235, 239, 241, 0.918);
     background: url(http://coding.imweb.io/img/project/resume/avatar.png) no-repeat;
     background-size: cover;
+}
+
+.user-img:hover{
+    border:3px;
+    box-shadow: 0 0 10px rgba(235, 239, 241, 0.918);
 }
 
 .information .information-bd .user-name{
@@ -141,6 +147,13 @@ li{
     margin-bottom: 3px 0;
 }
 
+.experience-list .experience-time::before{
+    content:"";
+    border-radius: 50%;
+    border-color: cornflowerblue;
+    border-width: 3px;
+}
+
 .experience-list p{
     font-size:medium;
     font-family: monospace;
@@ -158,30 +171,80 @@ li{
 }
 
 .skill-header{
-    
-    
-    
+    position:relative;
+    padding:.5px .5px;
+    margin-bottom: 0em;
 
 }
 
 .skill-header .skill-name{
-    display: inline-block;
-    
+    display: inline-block; 
+    flex-grow: 1;
+    margin-bottom: 2px;
 
 
 }
 
 .skill-header .skill-depth{
+    position:absolute;/*这里实现技能程度靠右*/
+    right:1px; /*这里实现技能程度靠右*/
     display: inline-block;
-    text-align: right;
-    
-    
+    margin-bottom: 2px;
+    padding:2px 4px;
+    /* text-align: right; */
+    border:1px solid rgb(163, 159, 159);
+    border-radius: 40%;     
 }
 
+.skill-detail{
+    padding:2px 0 6px 0;
+    margin:2px 0 4px 0;
+    border-bottom: 2px ;
+    border-color: rgb(128, 64, 64);
+
+}
 
 .skills-item p{
     font-size: smaller;
 }
+
+.skill-progress{
+    border:.5px solid rgb(192, 188, 188);
+    /* border-top-width:100%;
+    border-bottom-width: 100%; */    
+}
+
+.skill-progress:hover{
+    z-index: 1;
+    border:.8px solid rgba(127, 141, 189,50);
+    width:50%;
+    /* border-top-width:100%;
+    border-bottom-width: 100%; */
+    background-color: rgba(127, 141, 189,50);  
+    animation:run 4s ease infinite;
+    /* -webkit-animation:run 4s; */
+    
+}
+
+@keyframes run{
+    from{transform:translateX(0);}
+    33%{transform:translateX(33%);}
+    66%{transform:translateX(66%);}
+    100%{transform:translateX(100%);}
+}
+
+/* @keyframes run{
+    0%{z-index: 1;border:.8px solid rgba(127, 141, 189,50);width:0%;}
+    33%{z-index: 1;border:.8px solid rgba(127, 141, 189,50);width:33%;}
+    66%{z-index: 1;border:.8px solid rgba(127, 141, 189,50);width: 66%;}
+    100%{z-index: 1;border:.8px solid rgba(127, 141, 189,50);width: 100%;}
+}
+@-webkit-keyframes run{
+    0%{z-index: 1;border:.8px solid rgba(127, 141, 189,50);width:0%;}
+    33%{z-index: 1;border:.8px solid rgba(127, 141, 189,50);width:33%;}
+    66%{z-index: 1;border:.8px solid rgba(127, 141, 189,50);width: 66%;}
+    100%{z-index: 1;border:.8px solid rgba(127, 141, 189,50);width: 100%;}
+} */
 
 @media (min-width:768px){
     body{
