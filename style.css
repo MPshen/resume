@@ -3,12 +3,28 @@
     --line-color:rgb(218, 209, 209);
 }
 
+html,body, .experience,.experience-list, .experience-item{  
+    margin: 0;
+    padding: 0
+}
+
+
+
+.content{
+    display: flex;
+    /* align-items: stretch; */
+    flex-direction: column;  /*设置宽度较小时（手机模式），排列的方向为纵向*/
+    overflow:hidden;   /*取消掉左右的滚动条*/
+}
 
 .information{
+    display: flex;
+    /*flex:1; */
     width:100vw;
     height: 100vh;
     background:url(http://coding.imweb.io/img/project/resume/bg.png) repeat;
-    background-color:rgb(70, 128, 236);    
+    background-color:rgb(70, 128, 236); 
+    justify-content: center;   
     align-items: center;
     color:var(--experience-and-skills-backgroundcolor);
     margin:0;
@@ -32,15 +48,13 @@
     border-color: rgb(162, 194, 223);
     border-radius: 50%;
     /* background:var(rgba(235, 239, 241, 0.918)); */
-    background-color:rgba(235, 239, 241, 0.918);
+    
     background: url(http://coding.imweb.io/img/project/resume/avatar.png) no-repeat;
     background-size: cover;
+    background-color:white;
 }
 
-.user-img:hover{
-    border:3px;
-    box-shadow: 0 0 10px rgba(235, 239, 241, 0.918);
-}
+
 
 .information .information-bd .user-name{
     text-align: center;
@@ -76,7 +90,7 @@ li{
     padding-left:5px;
     font-size: 14px;
     border-radius: 4px;
-    border: .5px solid rgb(21, 20, 94);
+    border: .5px solid rgba(21, 20, 94, .3);
     position:absolute;
     /* transform:translateX(-50%); */
     transform: translate(-50%,100px);
@@ -85,6 +99,8 @@ li{
 
 
 .experience-and-skills{
+    /* display: flex;
+    flex:1; */
     top:0;
     margin:0;
     width:100vw;
@@ -96,7 +112,7 @@ li{
 
 .experience-and-skills .experience{
     display: inline-block;
-    width:100%;
+    width:95%;
     height: 50%;
     background-color:inherit;
 }
@@ -104,7 +120,7 @@ li{
 .experience-and-skills  .experience-header,
 .experience-and-skills  .skills-header{
     margin-top:60px;
-    width:100%;
+    width:95%;
     background: linear-gradient(to right,var(--experience-and-skills-backgroundcolor) 3%,var(--line-color) 3%,var(--line-color) 40%,var(--experience-and-skills-backgroundcolor) 40%,var(--experience-and-skills-backgroundcolor) 60%, var(--line-color) 60%) no-repeat;
     background-size: 100% 1px;
     background-position: right;
@@ -113,46 +129,61 @@ li{
 
 .experience-and-skills .skills{
     display: inline-block;
-    width:100%;
+    width:95%;
     height: 50%;
     background-color:inherit;
 }
 
+
+
 .experience-list{
+    padding-left: 20px;
     position:relative;
+    left:20px;
     flex-direction:column;
-    align-items: left;
+    width: 95%;
+    /* align-items: left; */
     text-align: left;
-    margin-bottom:2px;
     color:rgba(0, 0, 0, 0.63);
+    /* border-style: solid;
+    border-width: 0 0 0 1.5px;
+    border-color: var(--line-color);*/
+    /* transform: translateX(-50%);  */
 }
 
-.experience-list::before{
-    display: fixed;
-    content: "";
-    position:absolute;
-    width:100%;
-    height: 100%;
+.experience-item{
+    width: 95%;
+}
+.experience-list{
+    position:relative;
     border-style: solid;
     border-width: 0 0 0 1.5px;
     border-color: var(--line-color);
-    transform: translateX(0.6rem);  
+    margin-bottom:2px;
+    transform: translateX(0.6rem); 
 }
 
-.experience-list .experience-time,
-.experience-list .experience-name{
+.experience-item .icon-time{
+    position:absolute; 
+    left:0;
+    transform: translate(-60%,90%);
+    border-radius: 50%;
+    /* border-color: cornflowerblue; */
+    background: cornflowerblue;
+    width:10px;
+    height:10px;
+    box-shadow: 0 0 0 3px rgba(104, 151, 238, .2);
+}
+
+.experience-list .experience-item .experience-time,
+.experience-list .experience-item .experience-name{
+    /* position: relative; */
     font-size: 20px;
     font-weight: bold;
     padding:2px 0;
     margin-bottom: 3px 0;
 }
 
-.experience-list .experience-time::before{
-    content:"";
-    border-radius: 50%;
-    border-color: cornflowerblue;
-    border-width: 3px;
-}
 
 .experience-list p{
     font-size:medium;
@@ -163,7 +194,9 @@ li{
 
 
 .skills-list{
+    position:relative;
     list-style-type:none;
+    padding-left: 0;
     align-items: left;
     text-align: left;
     margin-bottom:2px;
@@ -181,8 +214,6 @@ li{
     display: inline-block; 
     flex-grow: 1;
     margin-bottom: 2px;
-
-
 }
 
 .skill-header .skill-depth{
@@ -192,7 +223,8 @@ li{
     margin-bottom: 2px;
     padding:2px 4px;
     /* text-align: right; */
-    border:1px solid rgb(163, 159, 159);
+    border:1px solid rgba(163, 159, 159,.5);
+    font-style:rgba(163, 159, 159,.5);
     border-radius: 40%;     
 }
 
@@ -208,22 +240,66 @@ li{
     font-size: smaller;
 }
 
+/*设置进度条容器*/
 .skill-progress{
-    border:.5px solid rgb(192, 188, 188);
-    /* border-top-width:100%;
-    border-bottom-width: 100%; */    
+    height: 4px;
+    background: rgba(172, 170, 170,.8);
+    width: 100%;
+    border-radius: 4px;
+    margin:12px 0;   
 }
 
-.skill-progress:hover{
-    z-index: 1;
-    border:.8px solid rgba(127, 141, 189,50);
-    width:50%;
-    /* border-top-width:100%;
-    border-bottom-width: 100%; */
-    background-color: rgba(127, 141, 189,50);  
-    animation:run 4s ease infinite;
-    /* -webkit-animation:run 4s; */
-    
+.skill-progress .progress{
+    height: 4px;
+    background:linear-gradient(to right,rgb(70, 128, 236),rgba(70, 128, 236,.8)) no-repeat left top/100% 4px;
+    border-radius: 4px;
+}
+/*进度条*/
+.skills-item:nth-child(1) .progress{
+    width: 70%;
+}
+.skills-item:nth-child(2) .progress{
+    width:90%    
+}
+.skills-item:nth-child(3) .progress{
+    width:80%;  
+}
+
+@keyframes progressRun{
+    from{
+        width: 0;
+    }        
+}
+.skills-item:hover .progress{
+    animation: progressRun 2s linear 1;    
+}
+
+
+/*头像闪烁动画*/
+@keyframes profileRun{
+    from{
+        box-shadow: 0 0 5px rgba(235, 239, 241, 0.918);
+    }
+    to{
+        box-shadow: 0 0 10px 15px rgba(235, 239, 241, 0.918);
+    }
+}
+
+.user-img:hover{
+    animation: profileRun .5s alternate infinite;
+}
+
+/* 工作经历点闪烁 */
+@keyframes iconTimeRun{
+    from{
+        box-shadow: 0 0 0 3px rgba(104, 151, 238, .2);
+    }
+    to{
+        box-shadow: 0 0 0 6px rgba(104, 151, 238, .2);
+    }
+}
+.experience-item:hover .icon-time{
+    animation: iconTimeRun .5s alternate infinite;
 }
 
 @keyframes run{
@@ -247,9 +323,9 @@ li{
 } */
 
 @media (min-width:768px){
-    body{
-        display:flex;
-        flex-wrap: wrap;
+    .content{
+        /* display:flex; */
+        /* flex-wrap: wrap; */
         flex-direction: row;
     }
     .information{

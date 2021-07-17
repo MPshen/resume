@@ -2,87 +2,95 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
         <title>resume</title>
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div class="information">
-            <div class="information-bd">
-                <div class="user-img"></div>
-                <h2 class="user-name">青蓝</h2>
-                <h4 class="user-hobbies">念经(coding)、参禅(thinking)、化缘(searching)</h4>
-                <div class="user-information1">
-                    <ul class="user-information1-1">
-                        <li class="user-email">mpshen@mails.cas.cn</li>
-                        <li class="user-phone">134****0315</li>
-                        <li class="user-github">https://github.com/MPshen</li>
-                    </ul>                
+        <div class="content">
+            <article class="information">
+                <div class="information-bd">
+                    <div class="user-img"></div>
+                    <h2 class="user-name">青蓝</h2>
+                    <h4 class="user-hobbies">念经(coding)、参禅(thinking)、化缘(searching)</h4>
+                    <div class="user-information1">
+                        <ul class="user-information1-1">
+                            <li class="user-email">mpshen@mails.cas.cn</li>
+                            <li class="user-phone">134****0315</li>
+                            <li class="user-github">https://github.com/MPshen</li>
+                        </ul>                
+                    </div>
+                    <div class="user-information2">
+                        <p class="user-information2-tt">学历：硕士&emsp;&emsp;&emsp;&emsp;&emsp;工作年限：0年</p>
+                        <p class="user-information2-tt">毕业院校：**大学&emsp;&emsp;出生年月：1996年8月</p>
+                    </div>         
                 </div>
-                <div class="user-information2">
-                    <p class="user-information2-tt">学历：硕士&emsp;&emsp;&emsp;&emsp;&emsp;工作年限：0年</p>
-                    <p class="user-information2-tt">毕业院校：**大学&emsp;&emsp;出生年月：1996年8月</p>
-                </div>         
-            </div>
-        </div>  
+            </article> 
 
-        <div class="experience-and-skills">
-            <div class="experience">
-                <h2 class="experience-header">工作经历</h2>
-                <div class="experience-bd">
-                    <ul class="experience-list">
-                        <li class="experience-item">
+            <article class="experience-and-skills">
+                <div class="experience">
+                    <h2 class="experience-header">工作经历</h2>
+                    <!-- <div class="experience-bd"> -->
+                    <div class="experience-list">
+                        <div class="experience-item">
+                            <span class="icon-time"></span>
                             <a class="experience-time">2014.08 — 至今</a><br>
                             <a class="experience-name">腾讯科技（深圳）有限公司 / 产品策划</a>
                             <p class="experience-detail">负责腾讯课堂教研功能的策划；能熟练对接用户及运营侧，规划版本，推进需求落地，并根据数据及用户反馈优化功能；所负责功能覆盖PC客户端、PCWeb、APP、H5。</p>
-                        </li>
-                        <li class="experience-item">
+                        </div>
+                        <div class="experience-item">
+                            <span class="icon-time"></span>
                             <a class="experience-time">2013.07 — 2013.10</a><br>
                             <a class="experience-name">腾讯科技深圳有限公司 / 产品实习生</a>
                             <p class="experience-detail">QQ群商业化探索（在线教育方向） 负责QQ群商业化探索，调研用户使用QQ群进行在线教育的情况，由于实习期间表现良好得以留用。调研结果帮助项目组决策，加大投入在线教育的资源，并在之后成立了腾讯课堂项目。</p>
-                        </li>
-                    </ul>
-
+                        </div>
+                    </div>
+    
+                    <!-- </div> -->
                 </div>
-            </div>
-
-
-            <div class="skills">
-                <h2 class="skills-header">技能特长</h2>
-                <div class="skills-bd">
-                    <ul class="skills-list">
-                        <li class="skills-item">
-                            <div class="skill-header">
-                                <h3 class="skill-name">PS</h3>
-                                <p class="skill-depth">了解</p>
-                            </div>                            
-                            <p class="skill-detail">基本切图</p>
-                            <p class="skill-progress"></p>
-                        </li>
-                        <li class="skills-item">
-                            <section class="skill-header">
-                                <h3 class="skill-name">HTML & CSS</h3>
-                                <p class="skill-depth">精通</p>
-                            </section>                             
-                            <p class="skill-detail">语义化、CSS3、动画、响应式、移动端、预处理器…</p>
-                            <p class="skill-progress"></p>
-                        </li>
-                        <li class="skills-item">
-                            <section class="skill-header">
-                                <h3 class="skill-name">Javascript</h3>
-                                <p class="skill-depth">熟悉</p>
-                            </section>                            
-                            <p class="skill-detail">Jquery、node、react、vue、webpack…</p>
-                            <p class="skill-progress"></p>
-                        </li>
-                    </ul>
+    
+    
+                <div class="skills">
+                    <h2 class="skills-header">技能特长</h2>
+                    <div class="skills-bd">
+                        <ul class="skills-list">
+                            <li class="skills-item">
+                                <div class="skill-header">
+                                    <h3 class="skill-name">PS</h3>
+                                    <p class="skill-depth">了解</p>
+                                </div>                            
+                                <p class="skill-detail">基本切图</p>
+                                <div class="skill-progress">
+                                    <div class="progress"></div>
+                                </div>
+                            </li>
+                            <li class="skills-item">
+                                <section class="skill-header">
+                                    <h3 class="skill-name">HTML & CSS</h3>
+                                    <p class="skill-depth">精通</p>
+                                </section>                             
+                                <p class="skill-detail">语义化、CSS3、动画、响应式、移动端、预处理器…</p>
+                                <div class="skill-progress">
+                                    <div class="progress"></div>
+                                </div>
+                            </li>
+                            <li class="skills-item">
+                                <section class="skill-header">
+                                    <h3 class="skill-name">Javascript</h3>
+                                    <p class="skill-depth">熟悉</p>
+                                </section>                            
+                                <p class="skill-detail">Jquery、node、react、vue、webpack…</p>
+                                <div class="skill-progress">
+                                    <div class="progress"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+                
+            </article>
             
-        </div>
-
-
-
-
+        </div>     
     </body>
 </html>
