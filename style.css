@@ -48,8 +48,8 @@ html,body, .experience,.experience-list, .experience-item{
     border-color: rgb(162, 194, 223);
     border-radius: 50%;
     /* background:var(rgba(235, 239, 241, 0.918)); */
-    
-    background: url(http://coding.imweb.io/img/project/resume/avatar.png) no-repeat;
+    background: url(./pictures/user.jpg) no-repeat;
+    /* background: url(http://coding.imweb.io/img/project/resume/avatar.png) no-repeat; */
     background-size: cover;
     background-color:white;
 }
